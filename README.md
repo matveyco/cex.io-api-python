@@ -13,13 +13,17 @@ USE
 ===
 
 I. Create your python project
+
 II. add "import cexapi" to your 
+
 III. create class 
   "cexapiv = cexapi.api(username,api_key,api_secret)"
   where username - your username on cex.io
   api_key - your api key
   api_secret - your api secret code
+
 IV. Use:
+
    a) API method parametrs
     1)couple = ("GHS\BTC" | "BF1\BTC") currency pair
     2)since = integer  return trades with tid >= since
