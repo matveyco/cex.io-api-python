@@ -65,7 +65,7 @@ class api:
  def balance(self):
   return self.api_call('balance', {}, 1)
 
- def open_orders(self, couple = 'GHS/BTC'):
+ def current_orders(self, couple = 'GHS/BTC'):
   return self.api_call('open_orders',{},1,couple)
 
  def cancel_order(self, order_id):

@@ -17,9 +17,9 @@ print demo.trade_history(100,'BF1/BTC')
 print "Balance"
 print demo.balance()
 print "Open orders (GHS/BTC)"
-print demo.open_orders() ## or ('GHS/BTC')
+print demo.current_orders() ## or ('GHS/BTC')
 print "Open orders (BF1/BTC)"
-print demo.open_orders('BF1/BTC')
+print demo.current_orders('BF1/BTC')
 print "Cancel order (order_id=100)"
 print demo.cancel_order(100)
 print "Plaсe order buy 4GHS/0.1BTC)"
