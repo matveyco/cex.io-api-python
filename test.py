@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import cexapi
 
-demo = cexapi.api(username,api_key,api_secret)
+demo = cexapi.api(username, api_key, api_secret)
 print "Ticker (GHS/BTC)"
 print demo.ticker() ## or demo.ticker('GHS/BTC')
 print "Ticker (BF1/BTC)"
