@@ -8,6 +8,7 @@ import hmac
 import hashlib
 import time
 import urllib
+import urllib2
 import json
 
 class api:
@@ -34,11 +35,9 @@ class api:
 
  def __post(self, url, param): ##Post Request (Low Level API call)
   params = urllib.urlencode(param)
-  dat = urllib.urlopen(url, params)
-  data = ''
-  for line in dat.readlines():
-   data = data + str(line)
-  return data;
+  req = urllib2.Request(url, params, {'User-agent': 'bot-cex.io-'+self.__username})
+  page = urllib2.urlopen(req).read()
+  return page;
  
  def api_call(self, method, param = {}, private = 0, couple = ''): ## api call (Middle level)
   url = 'https://cex.io/api/'+method+'/' ##generate url
