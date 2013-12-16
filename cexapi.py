@@ -25,7 +25,7 @@ class api:
 
  ##get timestamp as nonce
  def __nonce(self):
-  self.__nonce_v = str(time.time()).split('.')[0] 
+  self.__nonce_v = '{:.10f}'.format(time.time()*1000).split('.')[0]
  
  ##generate segnature
  def __signature(self):
